@@ -140,20 +140,20 @@ class Sheets extends Component {
 
   _renderToolbar = function () {
     const btnStyle = {
-      margin: '15px'
+      margin: '10px'
     };
     return (
       <div>
         <button onClick={this._toggleSearch}
-          className='pure-button pure-button-primary'
+          className='btn btn-primary'
           style={btnStyle}>Search</button>
         <a onClick={this._download.bind(this, 'json')}
           href="data.json"
-            className='pure-button pure-button-primary'
+            className='btn btn-primary'
             style={btnStyle}>Export JSON</a>
         <a onClick={this._download.bind(this, 'csv')}
           href="data.csv"
-            className='pure-button pure-button-primary'
+            className='btn btn-primary'
             style={btnStyle}>Export CSV</a>
       </div>
     );
@@ -174,7 +174,7 @@ class Sheets extends Component {
 
   _renderTable = function () {
     return (
-      <table className='pure-table pure-table-bordered'>
+      <table className='table table-striped table-hover'>
         <thead onClick={this._sort}>
           <tr>{
               this.props.headers.map(function (title, idx) {
@@ -195,6 +195,7 @@ class Sheets extends Component {
                     let content = cell;
                     let edit = this.state.edit;
                     if (edit && edit.row === rowidx && edit.cell === idx) {
+                      // eslint-disable-next-line
                       let content = (
                         <form onSubmit={this._save}>
                           <input type='text' defaultValue={cell} />
@@ -213,7 +214,7 @@ class Sheets extends Component {
 
   render = function () {
     return (
-      <div className="Sheets">
+      <div className="Sheets container">
         {this._renderToolbar()}
         {this._renderTable()}
       </div>
