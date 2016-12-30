@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/sample/App';
-// import Sheets from './components/Sheets';
+import Logo from './components/logo/Logo';
+import Sheets from './components/Sheets';
+import data from './data';
 
 ReactDOM.render(
-  <App />,
-  // <Sheets headers={headers} initialData = {data} />,
+  <div>
+    <Logo />
+    <Sheets headers={data.headers} initialData={data.body} />
+  </div>,
   document.getElementById('root')
 );
