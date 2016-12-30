@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import reactLogo from './react_logo.svg';
 import './Logo.css';
 
 class Logo extends Component {
@@ -7,7 +7,7 @@ class Logo extends Component {
     return (
       <div className="Logo">
         <div className="Logo-header">
-          <img src={logo} className="Logo-logo" alt="logo" />
+          <img src={reactLogo} className="Logo-icon" alt="react icon" />
           <h2>React Sandbox</h2>
         </div>
         <p className="Logo-intro">
