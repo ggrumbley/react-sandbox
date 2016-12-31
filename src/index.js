@@ -7,6 +7,7 @@ import Button from './components/button/Button';
 import Logo from './components/logo/Logo';
 import Sheets from './components/Sheets';
 import Suggest from './components/suggest/Suggest';
+import Rating from './components/rating/Rating';
 
 let headers = localStorage.getItem('headers');
 let data = localStorage.getItem('data');
@@ -27,6 +28,12 @@ ReactDOM.render(
 
     <h2>Suggest</h2>
     <div><Suggest options={['Tycho', 'Com Truise', 'Night Drive', 'Megadrive']} /></div>
+
+    <h2>Rating</h2>
+    <div>No initial value: <Rating /></div>
+    <div>Initial value 4: <Rating defaultValue={4} /></div>
+    <div>This one goes to 11: <Rating max={11}/></div>
+    <div>Read-only: <Rating readonly={true} defaultValue={3} /></div>
 
 </div>,
   document.getElementById('root')
