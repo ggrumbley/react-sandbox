@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-function Button(props) {
+const Button = (props) => {
   return props.href
     ? <a {...props} />
   : <button {...props} />;
