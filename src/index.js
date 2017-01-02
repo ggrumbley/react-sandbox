@@ -9,6 +9,7 @@ import Sheets from './components/Sheets';
 import Suggest from './components/suggest/Suggest';
 import Rating from './components/rating/Rating';
 import FormInput from './components/form-input/FormInput'
+import Form from './components/form/Form'
 
 let headers = localStorage.getItem('headers');
 let data = localStorage.getItem('data');
@@ -77,6 +78,15 @@ ReactDOM.render(
       </tr>
     </tbody>
   </table>
+
+  <h2>Forms</h2>
+  <Form
+    fields={[
+      {label: 'Rating', type: 'rating', id: 'rateme'},
+      {label: 'Greetings', id: 'freetext'},
+    ]}
+    initialData={ {rateme: 4, freetext: 'Hello'} }
+  />
 
 </div>,
   document.getElementById('root')

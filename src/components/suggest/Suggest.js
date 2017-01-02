@@ -4,7 +4,7 @@ class Suggest extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: props.defaultValue};
+    this.state = {value: props.defaultValue || ''};
   }
 
   getValue() {
