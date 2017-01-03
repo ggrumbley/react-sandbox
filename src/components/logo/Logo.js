@@ -4,7 +4,12 @@ import reactLogo from './react_logo.svg';
 import './Logo.css';
 
 class Logo extends Component {
+
   render() {
+    const active = {
+      color: '#ffffff',
+      backgroundColor: '#008cba'
+    };
     return (
       <div className="Logo">
         <div className="Logo-header">
@@ -15,8 +20,8 @@ class Logo extends Component {
           There is no peeing in the React Sandbox.
         </p>
         <ul className="nav nav-pills">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/whiskeynotes">WhiskeyNotes</Link></li>
+          <li><Link to="/" activeStyle={active}>Home</Link></li>
+          <li><Link to="/whiskeynotes" activeStyle={active}>WhiskeyNotes</Link></li>
         </ul>
       </div>
     );
