@@ -1,8 +1,8 @@
 export default {
-  headers: [
+  gamesHeaders: [
     'Name', 'Year', 'Min-Players', 'Max-Players', 'Time', 'Weight', 'Rating', 'BGG Rank'
   ],
-  body: [
+  gamesData: [
     ['Twilight Struggle', '2005', '2', '2', '180', '3.52', '8.4', '3'],
     ['Terra Mystica', '2012', '2', '5', '60-150', '3.93', '8.3', '4'],
     ['Puerto Rico', '2002', '2', '5', '90-150', '3.29', '8.1', '7'],
@@ -31,5 +31,6 @@ export default {
     ['Apples to Apples', '1999', '4', '10', '30', '1.17', '6', '2354'],
     ['Munchkin', '2001', '2', '6', '60-120', '1.79', '6', '2804'],
     ['Buzzword', '2003', '4', '12', '45', '1.21', '5.8', '5882'],
-  ]
+  ],
+  class: ['Rye', 'Bourbon', 'Irish', 'Scotch - Lowland', 'Scotch - Highland', 'Scotch - Speyside', 'Scotch - Campbeltown', 'Scotch - Islay', 'Scotch - Island', 'Scotch - Blend', 'Other']
 };

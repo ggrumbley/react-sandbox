@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 import reactLogo from './react_logo.svg';
 import './Logo.css';
 
@@ -13,6 +14,10 @@ class Logo extends Component {
         <p className="Logo-intro">
           There is no peeing in the React Sandbox.
         </p>
+        <ul className="nav nav-pills">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/whiskeynotes">WhiskeyNotes</Link></li>
+        </ul>
       </div>
     );
   }
