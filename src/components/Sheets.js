@@ -214,7 +214,7 @@ class Sheets extends Component {
 
   render = function () {
     return (
-      <div className="Sheets container">
+      <div className="Sheets">
         {this._renderToolbar()}
         {this._renderTable()}
       </div>

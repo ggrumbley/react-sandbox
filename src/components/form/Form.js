@@ -12,31 +12,36 @@ class Form extends Component {
   }
   render() {
     return (
-      <form className="Form">{this.props.fields.map((field: FormInputField) => {
-        const prefilled: FormInputFieldValue = (this.props.initialData && this.props.initialData[field.id]) || '';
-        if (!this.props.readonly) {
+      <div className="well bs-component">
+        <form className="form-horizontal">
+          <fieldset>
+          {this.props.fields.map((field: FormInputField) => {
+          const prefilled: FormInputFieldValue = (this.props.initialData && this.props.initialData[field.id]) || '';
+          if (!this.props.readonly) {
+            return (
+              <div className="form-group" key={field.id}>
+                <label className="col-lg-2 control-label" htmlFor={field.id}>{field.label}:</label>
+                <FormInput {...field} ref={field.id} defaultValue={prefilled} />
+              </div>
+            );
+          }
+          if (!prefilled) {
+            return null;
+          }
           return (
-            <div className="FormRow" key={field.id}>
-              <label className="FormLabel" htmlFor={field.id}>{field.label}:</label>
-              <FormInput {...field} ref={field.id} defaultValue={prefilled} />
+            <div className="form-group" key={field.id}>
+              <span className="col-lg-2 control-label">{field.label}:</span>
+              {
+                field.type === 'rating'
+                  ? <Rating readonly={true} defaultValue={parseInt(prefilled, 10)} />
+                  : <div>{prefilled}</div>
+              }
             </div>
           );
-        }
-        if (!prefilled) {
-          return null;
-        }
-        return (
-          <div className="FormRow" key={field.id}>
-            <span className="FormLabel">{field.label}:</span>
-            {
-              field.type === 'rating'
-                ? <Rating readonly={true} defaultValue={parseInt(prefilled, 10)} />
-                : <div>{prefilled}</div>
-            }
-          </div>
-        );
-      }, this)}
-      </form>
+        }, this)}
+          </fieldset>
+        </form>
+      </div>
     );
   }
 }
