@@ -28,7 +28,7 @@ class Dialog extends React.Component {
                 </span>
               : null
             }
-            <Button className= 'btn btn-primary' onClick={this.props.onAction.bind(this,
+            <Button className='btn btn-primary' onClick={this.props.onAction.bind(this,
                 this.props.hasCancel ? 'confirm' : 'dismiss')}>
               {this.props.confirmLabel}
             </Button>

@@ -8,7 +8,7 @@ import Sandbox from './sandbox'
 
 ReactDOM.render((
   <Router history={hashHistory}>
-    <Route path='/' component = {Sandbox} />
-    <Route path='/whiskeynotes' component = {Whiskey} />
+    <Route path='/' component={Sandbox} />
+    <Route path='/whiskeynotes' component={Whiskey} />
   </Router>
 ), document.getElementById('root'));
