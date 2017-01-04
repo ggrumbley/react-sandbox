@@ -147,7 +147,7 @@ class SheetsV2 extends React.Component {
 
   _renderTable() {
     return (
-      <table>
+      <table className="table table-striped table-hover">
         <thead>
           <tr>{
             this.props.schema.map(item => {

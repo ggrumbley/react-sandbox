@@ -74,23 +74,23 @@ class Whiskey extends React.Component {
   render () {
     return (
       <div className="Whinepad">
-        <div className="WhinepadToolbar">
-          <div className="WhinepadToolbarAdd">
-            <Button
-              onClick={this._addNewDialog.bind(this)}
-              className="WhinepadToolbarAddButton">
-              + add
-            </Button>
-          </div>
-          <div className="WhinepadToolbarSearch">
-            <input
-              placeholder="Search..."
-              onChange={this._search.bind(this)}
-              onFocus={this._startSearching.bind(this)}
-              onBlur={this._doneSearching.bind(this)} />
+        <div className="row">
+          <div className="well">
+            <div className="pull-right">
+              <Button
+                onClick={this._addNewDialog.bind(this)}
+                >
+                + add
+              </Button>
+            </div>
+              <input
+                placeholder="Search..."
+                onChange={this._search.bind(this)}
+                onFocus={this._startSearching.bind(this)}
+                onBlur={this._doneSearching.bind(this)} />
           </div>
         </div>
-        <div className="WhinepadDatagrid">
+        <div >
           <Sheets
             schema={this.props.schema}
             initialData={this.state.data}
