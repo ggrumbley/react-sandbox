@@ -29,7 +29,7 @@ export default [
     label: 'Rating',
     type: 'rating',
     show: true,
-    sample: 3
+    sample: 8
   },
   {
     id: 'comments',

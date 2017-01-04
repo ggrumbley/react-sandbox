@@ -191,7 +191,10 @@ class SheetsV2 extends React.Component {
                       </form>
                     );
                   } else if (isRating) {
-                    content = <Rating readonly={true} defaultValue={Number(content)} />;
+                    content = <Rating
+                                readonly={true}
+                                max={10}
+                                defaultValue={Number(content)} />;
                   }
                   return (
                     <td

@@ -2,7 +2,7 @@
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .Rating.RatingReadonly{
